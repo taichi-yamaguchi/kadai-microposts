@@ -18,9 +18,10 @@
                         <ul class="dropdown-menu dropdown-menu-right">
                             {{-- ユーザ詳細ページへのリンク --}}
                            <li class="dropdown-item">{!! link_to_route('users.show', 'My profile', ['user' => Auth::id()]) !!}</li>
-                            <li class="dropdown-divider"></li>
+                            {{-- お気に入りページへのリンク --}}
+                           <li class="dropdown-item">{!! link_to_route('users.favorites', 'favorites',['id' => Auth::id()]) !!}</li>
                             {{-- ログアウトへのリンク --}}
-                            <li class="dropdown-item">{!! link_to_route('logout.get', 'Logout') !!}</li>
+                        　 <li class="dropdown-item">{!! link_to_route('logout.get', 'Logout') !!}</li>
                         </ul>
                     </li>
                 @else
